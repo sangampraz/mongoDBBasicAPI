@@ -1,0 +1,22 @@
+const teams = [
+    {name: "Arsennal", gamesPlayed: 36, gamesWon: 24, gamesLoss: 5, location: "Greater London" },
+    {name: "Man City", gamesPlayed: 36, gamesWon: 23, gamesLoss: 5, location: "North West England" },
+    {name: "Man United", gamesPlayed: 36, gamesWon: 18, gamesLoss: 7, location: "North West England" },
+    {name: "Liverpool", gamesPlayed: 36, gamesWon: 17, gamesLoss: 11, location: "North West England" },
+    {name: "Aston Villa", gamesPlayed: 36, gamesWon: 17, gamesLoss: 11, location: "Midlands" },
+    {name: "Bournemouth", gamesPlayed: 36, gamesWon: 13, gamesLoss: 7, location: "South & East Coast" },
+    {name: "Brighton", gamesPlayed: 36, gamesWon: 14, gamesLoss: 11, location: "South & East Coast" },
+    {name: "Berntford", gamesPlayed: 36, gamesWon: 14, gamesLoss: 13, location: "Greater London" },
+    {name: "Chelsea", gamesPlayed: 36, gamesWon: 13, gamesLoss: 13, location: "Greater London" },
+    {name: "Everton", gamesPlayed: 36, gamesWon: 13, gamesLoss: 13, location: "North West England" },
+    {name: "Fulham", gamesPlayed: 36, gamesWon: 14, gamesLoss: 16, location: "Greater London" },
+    {name: "Sunderland", gamesPlayed: 36, gamesWon: 12, gamesLoss: 12, location: "North East Engaland" },
+    {name: "Newcastle", gamesPlayed: 36, gamesWon: 13, gamesLoss: 16, location: "North East Engaland" },
+    {name: "Leeds", gamesPlayed: 36, gamesWon: 10, gamesLoss: 12, location: "North West England" },
+    {name: "Crystal Palace", gamesPlayed: 36, gamesWon: 11, gamesLoss: 14, location: "Greater London" },
+    {name: "Nottm Forest", gamesPlayed: 36, gamesWon: 11, gamesLoss: 15, location: "Midlands" },
+    {name: "Tottenham", gamesPlayed: 36, gamesWon: 9, gamesLoss: 16, location: "Greater London" },
+    {name: "West Ham", gamesPlayed: 36, gamesWon: 9, gamesLoss: 18, location: "Greater London" },
+    {name: "Burnley", gamesPlayed: 36, gamesWon: 4, gamesLoss: 23, location: "North West England" },
+    {name: "Wolves", gamesPlayed: 36, gamesWon: 3, gamesLoss: 24, location: "Midlands" }
+];

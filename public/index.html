@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teams API</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Teams API</h1>
+    <p>This page reads teams from <code>/api/teams</code> and lets you add a product.</p>
+
+    <form id="team-form">
+      <input name="name" placeholder="Name" required>
+      <input name="gamesPlayed" type="number" step="1" min="0" placeholder="Games Played" required>
+      <input name="gamesWon" type="number" min="0" step="1" placeholder="Games Won" required>
+      <input name="gamesLoss" type="number" min="0" step="1" placeholder="Games Loss" required>
+      <input name="location" placeholder="Location" required>
+      <button type="submit">Add Team</button>
+    </form>
+
+    <p id="message"></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Games Played</th>
+          <th>Games Won</th>
+          <th>Games Loss</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody id="teams-body"></tbody>
+    </table>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
