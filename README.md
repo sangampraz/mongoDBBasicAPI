@@ -14,9 +14,9 @@ COLLECTION_NAME=teams
 ```
 
 ## Run in VS Code Dev Containers
-* 1. Open the folder in VS Code.
-* 2. Choose Reopen in Container. 
-* 3. After teh container finishes building run:
+1. Open the folder in VS Code.
+2. Choose Reopen in Container. 
+3. After teh container finishes building run:
 ```bash
 npm run seed
 npm run dev
