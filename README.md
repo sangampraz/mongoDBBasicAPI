@@ -33,8 +33,7 @@ http://localhost:3000
 | GET | `/api/health` | Check API and database connection |
 | GET | `/api/teamss` | List all teams |
 | GET | `/api/teams?location=Greater London` | Filter by location |
-| GET | `/api/products?minPrice=50&maxPrice=200` | Filter by price range |
-| GET | `/api/teams/:id` | Get one team0 |
+| GET | `/api/teams/:id` | Get one team |
 | POST | `/api/teams` | Create a team |
 | PUT | `/api/teams/:id` | Replace a team |
 | PATCH | `/api/teams/:id` | Partially update a team |
