@@ -6,7 +6,7 @@ const { ConnectToDatabase, ToObjectId, CloseDatabase } = require('./db');
 const { queryObjects } = require('v8');
 
 const app = express();
-const port = Number(process.env.PORT) || 3001;
+const port = Number(process.env.PORT) || 3000;
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
@@ -65,12 +65,12 @@ function ValidateTeam(team) {
 app.get('/api/health', async (request, response) => {
   const collection = await ConnectToDatabase();
   const count = await collection.countDocuments();
-  response.json({ status: 'ok', database: process.env.DB_NAME, products: count });
+  response.json({ status: 'ok', database: process.env.DB_NAME, DataTransferItemList: count });
 });
 
 app.get('/api/teams', async (request, response) => {
   const collection = await ConnectToDatabase();
-  const filter = BuildProductQuery(request.query);
+  const filter = BuildTeamQuery(request.query);
   const teams = await collection.find(filter).sort({ name: 1 }).toArray();
   response.json(teams);
 });
@@ -78,7 +78,7 @@ app.get('/api/teams', async (request, response) => {
 app.get('/api/teams/:id', async (request, response) => {
   const id = ToObjectId(request.params.id);
   if (!id) {
-    return response.status(400).json({ error: 'Invalid product id.' });
+    return response.status(400).json({ error: 'Invalid team id.' });
   }
 
   const collection = await ConnectToDatabase();
@@ -100,7 +100,7 @@ app.post('/api/teams', async (request, response) => {
     location: String(request.body.location|| '')
   };
 
-  const error = ValidateProduct(team);
+  const error = ValidateTeam(team);
   if (error) {
     return response.status(400).json({ error });
   }
@@ -131,7 +131,7 @@ app.put('/api/teams/:id', async (request, response) => {
     location: String(request.body.location|| '')
   };
 
-  const error = ValidateProduct(team);
+  const error = ValidateTeam(team);
   if (error) {
     return response.status(400).json({ error });
   }
@@ -201,7 +201,7 @@ app.use((error, request, response, next) => {
 });
 
 const server = app.listen(port, () => {
-  console.log(`Products API running on http://localhost:${port}`);
+  console.log(`Teams API running on http://localhost:${port}`);
 });
 
 process.on('SIGTERM', async () => {

@@ -1,5 +1,5 @@
 const teams = [
-    {name: "Arsennal", gamesPlayed: 36, gamesWon: 24, gamesLoss: 5, location: "Greater London" },
+    {name: "Arsenal", gamesPlayed: 36, gamesWon: 24, gamesLoss: 5, location: "Greater London" },
     {name: "Man City", gamesPlayed: 36, gamesWon: 23, gamesLoss: 5, location: "North West England" },
     {name: "Man United", gamesPlayed: 36, gamesWon: 18, gamesLoss: 7, location: "North West England" },
     {name: "Liverpool", gamesPlayed: 36, gamesWon: 17, gamesLoss: 11, location: "North West England" },
@@ -20,3 +20,5 @@ const teams = [
     {name: "Burnley", gamesPlayed: 36, gamesWon: 4, gamesLoss: 23, location: "North West England" },
     {name: "Wolves", gamesPlayed: 36, gamesWon: 3, gamesLoss: 24, location: "Midlands" }
 ];
+
+module.exports = teams;

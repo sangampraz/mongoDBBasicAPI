@@ -1,5 +1,5 @@
-const tableBody = document.querySelector('#products-body');
-const form = document.querySelector('#product-form');
+const tableBody = document.querySelector('#teams-body');
+const form = document.querySelector('#team-form');
 const message = document.querySelector('#message');
 
 function ShowMessage(text) {
@@ -10,7 +10,7 @@ function AddTeamRow(team) {
   const row = document.createElement('tr');
   row.innerHTML = `
     <td><a href="/api/teams/${team._id}">${team.name}</a></td>
-    <td>$${team.gamesPlayed}</td>
+    <td>${team.gamesPlayed}</td>
     <td>${team.gamesWon}</td>
     <td>${team.gamesLoss}</td>
     <td>${team.location}</td>
@@ -18,7 +18,7 @@ function AddTeamRow(team) {
   tableBody.appendChild(row);
 }
 
-async function LoadProducts() {
+async function LoadTeams() {
   tableBody.innerHTML = '';
   const response = await fetch('/api/teams');
   const teams = await response.json();
@@ -46,12 +46,12 @@ form.addEventListener('submit', async (event) => {
 
   if (!response.ok) {
     const error = await response.json();
-    ShowMessage(error.error || 'Could not add product.');
+    ShowMessage(error.error || 'Could not add team.');
     return;
   }
 
   form.reset();
-  await LoadProducts();
+  await LoadTeams();
 });
 
-LoadProducts().catch(error => ShowMessage(error.message));
+LoadTeams().catch(error => ShowMessage(error.message));
