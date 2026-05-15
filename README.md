@@ -51,7 +51,7 @@ curl "http://localhost:3000/api/teamss?gamesPlayed=25"
 
 ## Answer for the questions in mongodb-app-01-s26
 1. What is the purpose of using `.env`
-* -> The purpose of using a `.env` file is to store configuration variable and sensitive information separately from the main application code. This makes the applicaiton easier to manage, more secure, and more flexible across different environments (development, testing, production).
+  The purpose of using a `.env` file is to store configuration variable and sensitive information separately from the main application code. This makes the applicaiton easier to manage, more secure, and more flexible across different environments (development, testing, production).
 
 2. How does this work:
 ```js
@@ -61,7 +61,7 @@ if (query.minPrice || query.maxPrice) {
     if (query.maxPrice) filter.price.$lte = Number(query.maxPrice);
 }
 ```
--> This code checks whether the user provided a minimum or maximum price in the URL query. If they did, it creates a `price` filter object. The `$gte` operator is used to find products greater than or equal to the minimum price, and `$lte` is used to find products less than or equal to the maximum price. This allows the API to return only products within the selected price range. 
+* -> This code checks whether the user provided a minimum or maximum price in the URL query. If they did, it creates a `price` filter object. The `$gte` operator is used to find products greater than or equal to the minimum price, and `$lte` is used to find products less than or equal to the maximum price. This allows the API to return only products within the selected price range. 
 
 3. What is the program `seed.js` used for?
 * -> The `seed.js` program is used to initialize the database with sample product data. It connects to MongoDB, deletes any existing products, and inserts new products from the `products.js` file. This is useful for testing and resetting the database to a known starting state during development. 
